@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Random Guessing Number Game</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1>Let's play game!</h1>
+					<p>Guess number between 0 - 100</p>
+				</div>
+			</div>
+
+			<div class="row" >
+				<div class="col-md-9">
+					<div id="alertContainer"></div>
+					
+					<input type="text" class="form-control text-center" id="userNumber" disabled>
+					<br/>
+					<div class="row">
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary" id="one">1</button>
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary " id="two">2</button>
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary " id="three">3</button>
+						</div>
+						</div>
+						<br/>
+
+						<div class="row" >
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary " id="four">4</button>
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary " id="five">5</button>
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary "id="six">6</button>
+						</div>
+						</div>
+						<br/>
+						<div class="row" >
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary " id="seven">7</button>
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary " id="eight">8</button>
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary "id="nine" >9</button>
+						</div>
+						</div>
+						<br/>
+						<div class="row" >
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-primary " id="zero">0</button>
+						</div>
+						
+
+					</div>
+
+					<br/>
+					<div class="row">
+						<div class="col-md-4">
+						</div>
+						<div class="col-md-4">
+							<button type="button" class="btn btn-block btn-success " id="guess">Guess now!</button>
+						</div>
+						<div class="col-md-4">
+						</div>
+					</div>
+					
+				</div>
+
+				<div class="col-md-3 text-center">
+					<button class="btn btn-info btn-lg" id="bangkok">bangkok</button>
+					<br/><br/>
+					<button class="btn btn-info btn-lg" id="london">London</button>
+					<br/><br/>
+					<button class="btn btn-info btn-lg" id="seoul">Seoul</button>
+					<h1 id="temp">xx.x</h1>
+					<p>Temperature</p>
+					<p id="city-name"></p>
+					
+
+				</div>
+			</div>
+  	</div>
+  	<script type="text/javascript" src="js/game.js"></script>
+  	<script type="text/javascript" src="js/weather.js"></script>
+  </body>
+</html>
+
+
+
+
+
