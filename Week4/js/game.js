@@ -1,8 +1,8 @@
 (function(){
 var game = {
-randomNumber: 11, //we will random this number later
-init: function(){
-	this.bindEvent();
+randomNumber: Math.floor(Math.random() * 23),
+	init: function(){
+		this.bindEvent();
 
 },
 bindEvent: function() {
@@ -33,7 +33,6 @@ clickNumberButton: function(e){
 		var alertMsg = document.getElementById("alertContainer");
 		if (userNumber.value == self.randomNumber) {
 		alertMsg.innerHTML = '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Congratulations!</strong> Correct number.</div>';
-		
 
 		}else if (userNumber.value < self.randomNumber)
 		{
@@ -49,7 +48,5 @@ clickNumberButton: function(e){
 };
 
 game.init();
-
-
 
 })();
