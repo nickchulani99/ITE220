@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Products| ThaiShop</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<style type="text/css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header{
+background:#1a1818;
+min-height:60px;
+border-bottom:3px solid #a70101;
+padding:1em;
+position:relative;
+}
+
+.header-left{
+float:left;
+}
+.top-menu{
+margin-top: 4px;
+}
+
+.top-menu ul li{
+display:inline-block;
+}
+
+.top-menu ul li a{
+display:block;
+padding:0.5em 0.5em 0 0.5em;
+color:#fff;
+text-decoration:none;
+font-size:1em;
+margin:0 5px;
+border-bottom:2px solid #1a1818;
+}
+
+.top-menu ul li a:hover,.top-menu ul li.active a{
+border-bottom:2px solid #fff;
+}
+
+.header-right{
+float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+#loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("https://d13yacurqjgara.cloudfront.net/users/437210/screenshots/2030009/loading.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a.back-to-top {
+  display: none;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #27AE61 url("up-arrow.png") no-repeat center 43%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+a:hover.back-to-top {
+  background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+css style for price button*/
+
+
+.button {
+  display: inline-block;
+  
+  background-color: #008CBA;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 15px 32px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 4px 85px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*
+css style for price button*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+  margin: 25px 0;
+  clear: both;
+}
+.wrapper {
+  width: 100%;
+  padding: 30px 0;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.grid-container {
+  display: none;
+}
+/* ----- Image grids ----- */
+ul.rig {
+  list-style: none;
+  font-size: 0px;
+  margin-left: -2.5%; /* should match li left margin */
+}
+ul.rig li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 0 2.5% 2.5%;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  font-size: 1rem;
+  vertical-align: top;
+  box-shadow: 0 0 5px #ddd;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ul.rig li img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+}
+ul.rig li h3 {
+  margin: 0 0 5px;
+}
+ul.rig li p {
+  font-size: .9em;
+  line-height: 1.5em;
+  color: #999;
+}
+
+ul.rig.columns-4 li {
+  width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: auto;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul.grid-nav li {
+    display: block;
+    margin: 0 0 5px;
+  }
+  ul.grid-nav li a {
+    display: block;
+  }
+  ul.rig {
+    margin-left: 0;
+  }
+  ul.rig li {
+    width: 100% !important; /* over-ride all li styles */
+    margin: 0 0 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+<div id="page">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="header single">
+  
+     <div class="header-left">
+       <div class="top-menu">
+         <ul>
+         <li><a href="home.html">HOME</a></li>
+           
+         <li class="active"><a href="boots.html">Products</a></li>      
+         </ul>
+       </div>
+     </div>
+     
+ <div class="header-right">
+        
+       
+          <div class="cart-sec">
+          
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="business" value="M58RYEPVZTUHW">
+<input type="hidden" name="display" value="1">
+<input type="image" src="https://www.paypalobjects.com/en_GB/TH/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+          </div>
+               
+       </div>
+    
+
+     
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="wrapper">
+  <div class="container">
+    
+
+  
+    
+    <hr />
+    
+    <div id="four-columns" class="grid-container" style="display:block;">
+      <ul class="rig columns-4">
+        <li>
+          <img src="images/products/sneakers/s_1.jpg" onmouseover="this.src='images/products/sneakers/s_1.1.jpg'" onmouseout="this.src='images/products/sneakers/s_1.jpg'"/>
+          <h3> OBRA LEATHER</h3>
+          <p>Lightweight sockliner mirrors the shape of your foot</p>
+           <button class="button" style="vertical-align:middle"onclick="window.location.href='single.html'"><span> $149 </span></button>  
+        </li>
+
+        <li>
+                    <img src="images/products/sneakers/s_2.jpg" onmouseover="this.src='images/products/sneakers/s_2.1.jpg'" onmouseout="this.src='images/products/sneakers/s_2.jpg'"/>
+          <h3>OBRA FG</h3>
+          <p>Firm-Ground Football Boot is designed for the playmaker who creates opportunities .</p>
+        <button class="button" style="vertical-align:middle"onclick="window.location.href='single2.html'"><span>$199 </span></button>
+        </li>
+
+        <li>
+          <img src="images/products/sneakers/s_3.jpg" onmouseover="this.src='images/products/sneakers/s_3.1.jpg'" onmouseout="this.src='images/products/sneakers/s_3.jpg'"/>
+          <h3>MAGISTA OBRA</h3>
+          <p> the Magista Obra is designed for the playmaker </p>
+       <button class="button" style="vertical-align:middle"><span>$240 </span></button>
+        </li>
+
+        <li>
+          <img src="images/products/sneakers/s_4.jpg" onmouseover="this.src='images/products/sneakers/s_4.1.jpg'" onmouseout="this.src='images/products/sneakers/s_4.jpg'"/>
+          <h3>OPUS FG</h3>
+          <p>The Kanga-Lite upper moulds to your foot for a soft, adaptive fit, </p>
+        <button class="button" style="vertical-align:middle"><span>$110 </span></button>
+        </li>
+
+        <li>
+          <img src="images/products/sneakers/s_5.jpg" onmouseover="this.src='images/products/sneakers/s_5.1.jpg'" onmouseout="this.src='images/products/sneakers/s_5.jpg'"/>
+          <h3>OLA TF</h3>
+          <p>Ola Men's Turf Football Boot delivers great touch and quick changes of direction .</p>
+       <button class="button" style="vertical-align:middle"><span>$459 </span></button>
+        </li>
+
+        <li>
+          <img src="images/products/sneakers/s_6.jpg" onmouseover="this.src='images/products/sneakers/s_6.1.jpg'" onmouseout="this.src='images/products/sneakers/s_6.jpg'"/>
+          <h3>VORTEX II IC</h3>
+          <p>Indoor-Competition Football Shoe features a Vapor court traction pattern.</p>
+        <button class="button" style="vertical-align:middle"><span>$990 </span></button>
+        </li>
+
+        <li>
+          <img src="images/products/sneakers/s_7.jpg" onmouseover="this.src='images/products/sneakers/s_7.1.jpg'" onmouseout="this.src='images/products/sneakers/s_7.jpg'"/>
+          <h3>TIEMPO MYSTIC</h3>
+          <p> designed for use on synthetic surfaces, made with a soft, supple leather</p>
+        <button class="button" style="vertical-align:middle"><span>$799 </span></button>
+        </li>
+
+        <li>
+          <img src="images/products/sneakers/s_8.jpg" onmouseover="this.src='images/products/sneakers/s_8.1.jpg'" onmouseout="this.src='images/products/sneakers/s_8.jpg'"/>
+          <h3>KOBE XI ELITE</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing .</p>
+        <button class="button" style="vertical-align:middle"><span>$310 </span></button>
+        </li>
+
+        <li>
+         <img src="images/products/sneakers/s_9.jpg" onmouseover="this.src='images/products/sneakers/s_9.1.jpg'" onmouseout="this.src='images/products/sneakers/s_9.jpg'"/>
+          <h3>LEBRON XIII ELITE</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing .</p>
+        <button class="button" style="vertical-align:middle"><span>$230 </span></button>
+        </li>
+
+        <li>
+          <img src="images/products/sneakers/s_10.jpg" onmouseover="this.src='images/products/sneakers/s_10.1.jpg'" onmouseout="this.src='images/products/sneakers/s_10.jpg'"/>
+          <h3>ZOOM HYPERREV</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing .</p>
+        <button class="button" style="vertical-align:middle"><span>$340 </span></button>
+        </li>
+
+        <li>
+         <img src="images/products/sneakers/s_11.jpg" onmouseover="this.src='images/products/sneakers/s_11.1.jpg'" onmouseout="this.src='images/products/sneakers/s_11.jpg'"/>
+          <h3>JORDAN SUPER.FLY</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing .</p>
+        <button class="button" style="vertical-align:middle"><span>$590 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_12.jpg" onmouseover="this.src='images/products/sneakers/s_12.1.jpg'" onmouseout="this.src='images/products/sneakers/s_12.jpg'"/>
+          <h3>TRAIN FORCE </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing .</p>
+        <button class="button" style="vertical-align:middle"><span>$609 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_13.jpg" onmouseover="this.src='images/products/sneakers/s_13.1.jpg'" onmouseout="this.src='images/products/sneakers/s_13.jpg'"/>
+          <h3>TRAIN VERSATILITY</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+        <button class="button" style="vertical-align:middle"><span>$389 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_14.jpg" onmouseover="this.src='images/products/sneakers/s_14.1.jpg'" onmouseout="this.src='images/products/sneakers/s_14.jpg'"/>
+          <h3>METCON 2 AMPLIFY</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+        <button class="button" style="vertical-align:middle"><span>$265 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_15.jpg" onmouseover="this.src='images/products/sneakers/s_15.1.jpg'" onmouseout="this.src='images/products/sneakers/s_15.jpg'"/>
+          <h3>SB ZOOM ALL</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing .</p>
+        <button class="button" style="vertical-align:middle"><span>$170 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_16.jpg" onmouseover="this.src='images/products/sneakers/s_16.1.jpg'" onmouseout="this.src='images/products/sneakers/s_16.jpg'"/>
+          <h3>SB DUNK HIGH</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing e.</p>
+        <button class="button" style="vertical-align:middle"><span>$360 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_17.jpg" onmouseover="this.src='images/products/sneakers/s_17.1.jpg'" onmouseout="this.src='images/products/sneakers/s_17.jpg'"/>
+          <h3>NIKE SB FREE</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing .</p>
+        <button class="button" style="vertical-align:middle"><span>$400 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_18.jpg" onmouseover="this.src='images/products/sneakers/s_18.1.jpg'" onmouseout="this.src='images/products/sneakers/s_18.jpg'"/>
+          <h3>STEFAN JANOSKI MAX </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+        <button class="button" style="vertical-align:middle"><span>$240 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_19.jpg" onmouseover="this.src='images/products/sneakers/s_19.1.jpg'" onmouseout="this.src='images/products/sneakers/s_19.jpg'"/>
+          <h3>SOCK DART SE</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+        <button class="button" style="vertical-align:middle"><span>$130 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_20.jpg" onmouseover="this.src='images/products/sneakers/s_20.1.jpg'" onmouseout="this.src='images/products/sneakers/s_20.jpg'"/>
+          <h3>ICORTEZ ULTRA</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing </p>
+        <button class="button" style="vertical-align:middle"><span>$220 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_21.jpg" onmouseover="this.src='images/products/sneakers/s_21.1.jpg'" onmouseout="this.src='images/products/sneakers/s_21.jpg'"/>
+          <h3>CORTEZ BASIC </h3>
+          <p>the Magista Obra is designed for the playmaker.</p>
+        <button class="button" style="vertical-align:middle"><span>$560 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_22.jpg" onmouseover="this.src='images/products/sneakers/s_22.1.jpg'" onmouseout="this.src='images/products/sneakers/s_22.jpg'"/>
+          <h3>IHUARACHE ULTRA </h3>
+          <p>Indoor-Competition Football Shoe features a Vapor court traction pattern..</p>
+        <button class="button" style="vertical-align:middle"><span>$399 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_23.jpg" onmouseover="this.src='images/products/sneakers/s_23.1.jpg'" onmouseout="this.src='images/products/sneakers/s_23.jpg'"/>
+          <h3>JORDAN 9 RETRO </h3>
+          <p>designed for use on synthetic surfaces, made with a soft, supple leather</p>
+        <button class="button" style="vertical-align:middle"><span>$329 </span></button>
+        </li>
+
+        <li>
+        <img src="images/products/sneakers/s_24.jpg" onmouseover="this.src='images/products/sneakers/s_24.1.jpg'" onmouseout="this.src='images/products/sneakers/s_24.jpg'"/>
+          <h3>AIR FORCE 1</h3>
+          <p>Ola Men's Turf Football Boot delivers great touch and quick changes of direction </p>
+        <button class="button" style="vertical-align:middle"><span>$340 </span></button>
+        </li>
+
+
+
+      </ul>
+    </div>
+    <!--/#four-columns-->
+    
+    <hr />
+    
+    
+  </div>
+  <!--/.container-->
+</div>
+<!--/.wrapper-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.grid-nav li a').on('click', function(event){
+    event.preventDefault();
+    $('.grid-container').fadeOut(500, function(){
+      $('#' + gridID).fadeIn(500);
+    });
+    var gridID = $(this).attr("data-id");
+    
+    $('.grid-nav li a').removeClass("active");
+    $(this).addClass("active");
+  });
+});
+</script>
+
+
+
+
+
+<p style="float: right;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+  if ( $(window).scrollTop() > amountScrolled ) {
+    $('a.back-to-top').fadeIn('slow');
+  } else {
+    $('a.back-to-top').fadeOut('slow');
+  }
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 700);
+  return false;
+});
+</script>
+
+
+
+
+
+<script type="text/javascript">
+	
+
+function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 1000);
+
+    function checkReady() {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
+    }
+}
+
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+
+onReady(function () {
+    show('page', true);
+    show('loading', false);
+});
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="loading"></div>
+</body>
+</html>

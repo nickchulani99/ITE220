@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boots| ThaiShop</title>
+
+
+
+
+
+
+</head>
+<body>
+
+<!-- change image on mouse over 
+<a href="#"><img src="images/b_1.jpeg" onmouseover="this.src='images/b_1.1.jpeg'" onmouseout="this.src='images/b_1.jpeg'"/></a>
+ -->
+
+
+
+
+<script language='JavaScript' type='text/javascript'>
+
+    function check_value()
+
+
+ {
+        switch(document.test.field.value)
+        {
+            case "one":
+             
+                document.getElementById("imagedest").innerHTML = "<img src='images/products/s_1.jpg'>";
+                break;
+
+            case "two":
+
+                document.getElementById("imagedest").innerHTML = "<img src='images/b_2.1.jpeg'>"; 
+                break;
+
+            case "three":
+
+                document.getElementById("imagedest").innerHTML = "<img src='images/b_3.jpeg'>"; 
+                break;
+        }
+    }
+
+</script>
+
+
+<form name='test'>
+    <input type="radio" name="field" value="one" onchange='check_value()'>one 
+    <input type="radio" name="field" value="two" onchange='check_value()'>two 
+    <input type="radio" name="field" value="three" onchange='check_value()'>three 
+</form>
+
+<div id='imagedest'>
+</div>
+
+
+
+
+</body>
+</html>
