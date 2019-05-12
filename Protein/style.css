@@ -1,0 +1,200 @@
+
+
+a{
+	color: blue;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover{
+	color: red;
+	text-decoration: underline;
+
+}
+header{
+	background: #405580;
+	width: 100%;
+	height: 86px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	opacity: 0.9;
+}
+#logo{
+	margin: 20px;
+	float: left;
+	width: 230px;
+	height: 60px;
+	background: url(logo.png) no-repeat center;
+}
+
+nav{
+	float: right;
+	padding: 35px 20px 20px 0;
+
+}
+
+#menu-icon{
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(http://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+a:hover#menu-icon{
+	border-radius: 4px 4px 0 0;
+
+}
+ul{
+	list-style: none;
+}
+
+nav ul li{
+	display: inline-block;
+	float: left;
+	padding: 10px;
+
+}
+.current{
+	color: #fff;
+	text-decoration: underline;
+}
+#doc{
+	margin: 40px 0;
+}
+
+#content{
+	margin: 0 auto;
+	max-width: 1140px;
+	margin-top: 110px;
+}
+.blueberry{
+	max-width: 960px;
+	margin-top: 110px;
+}s
+
+
+
+
+
+
+
+
+
+
+
+body{
+	background: #f0f0f0;
+	font:14px/20px Arial, San-Serif;
+	color: #555;
+	margin: 0;
+}
+
+h1{
+	text-align: center;
+	font-size: 180%;
+	line-height: 120%;
+	padding: 5%, 0;
+}
+
+h2{
+	text-decoration: underline;
+	line-height: 280%;
+	padding-left: 2%;
+
+}
+
+h3{
+	line-height: 110%;
+	padding: 5%, 0;
+}
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 100%;               
+  background-color:black;
+  height: 1px;
+}
+
+p{
+	padding: 1%;
+}
+
+footer{
+	background: #333333;
+	width: 100%;
+	overflow:hidden;
+	opacity: 0.90.;
+}
+footer p, footer h3{
+	color: #fff;
+
+}
+footer p a{
+	color: #fff;
+	text-decoration: none;
+}
+ul.social li{
+	display: inline;
+}
+ul.social li img {
+	height: 50px;
+
+}
+footer.second{
+	border-top: 1px solid#4D4E50;
+	background-color: #333333;
+	max-height:50px;
+	text-align: center;
+	opacity: 0.95;
+}
+
+
+.blueberry { margin: 0 auto; }
+.blueberry .slides {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.blueberry .slides li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.blueberry .slides li img {
+	display: block;
+	width: 100%;
+	max-width: none;
+}
+.blueberry .slides li.active { display: block; position: relative; }
+.blueberry .crop li img { width: auto; }
+
+.blueberry .pager {
+	height: 40px;
+	text-align: center;
+}
+.blueberry .pager li { display: inline-block; }
+.blueberry .pager li a,
+.blueberry .pager li a span {
+	display: block;
+	height: 4px;
+	width: 4px;
+}
+.blueberry .pager li a {
+	padding: 18px 8px;
+-webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.blueberry .pager li a span {
+	overflow: hidden;
+	background: #c0c0c0;
+	text-indent: -9999px;
+-webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.blueberry .pager li.active a span { background: #404040; }
